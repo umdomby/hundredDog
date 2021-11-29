@@ -7,10 +7,7 @@ const Dogs = () => {
     const [loading1, setLoading1] = useState(true)
     const [dog, setDog] = useState([])
     const [searchTitle, setSearchTitle] = useState('')
-    const [breedValueSelect, setBreedValueSelect] = useState('')
-
     const [selectBreed, setSelectBreed] = useState([])
-
     const [pageNumber01, setPageNumber01] = useState(0);
     const usersPerPage01 = 5;
     const pagesVisited01 = pageNumber01 * usersPerPage01;
@@ -51,12 +48,12 @@ const Dogs = () => {
         setSearchTitle('')
     }
 
-    const sendSelectBreed = async () => {
-        setDog(await fetchSelectBreed(breedValueSelect))
+    const sendSelectBreed = async (e) => {
+        setDog(await fetchSelectBreed(e))
     }
 
     return(
-        <Container style={{maxWidth: '100%'}}>
+        <Container style={{maxWidth: '100%', minWidth: '700px'}}>
             <div className="m-2 border">
                 <Row className="m-2 d-flex h-100 justify-content-center align-self-center">
                     <Col className="mr-2 border" style={{maxWidth: '33%', fontSize:'12px'}}>
@@ -75,8 +72,7 @@ const Dogs = () => {
                     </Col>
                     <Col className="mr-2 border" style={{maxWidth: '30%', fontSize:'12px'}}>
                         <select
-                            onChange={e => setBreedValueSelect(e.target.value)}
-                            onClick={sendSelectBreed}
+                            onChange={e => sendSelectBreed(e.target.value)}
                         >
                             {selectBreed.map((item, index) =>
                                 <option key={index} value={item}>{item}</option>
