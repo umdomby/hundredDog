@@ -1,0 +1,54 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.user {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #b3e3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 170px;
+  margin: 20px;
+}
+
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #979797;
+  color: #b1b1b1;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #878787;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #a0a0a0;
+}
+
+.paginationDisabled a {
+  color: #ffffff;
+  background-color: #585858;
+}
+
+
