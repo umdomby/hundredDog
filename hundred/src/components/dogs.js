@@ -12,6 +12,9 @@ const Dogs = () => {
     const usersPerPage01 = 5;
     const pagesVisited01 = pageNumber01 * usersPerPage01;
 
+
+
+
     useEffect(() => {
         fetchDog()
     },[]);
