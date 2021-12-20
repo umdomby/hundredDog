@@ -5,6 +5,9 @@ export const fetchRecordDog = async () => {
     return data
 }
 
+
+
+
 export const fetchSearchTitle = async (title) => {
     const {data} = await $host.get('api/records/search/' + title)
     return data
